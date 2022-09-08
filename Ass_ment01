@@ -1,0 +1,26 @@
+#include <stdio.h>
+void sub(int *pa,int *pb)
+{
+    int sub;
+    sub=*pa - *pb;
+    if(sub<0)
+    sub=*pb - *pa;
+    printf("%d",sub);
+    
+}
+int main() {
+    int a, b;
+    int *pa , *pb ;
+    scanf("%d %d", &a, &b);
+    pa= &a;
+    pb= &b;
+    add(pa, pb);
+    sub(pa,pb);
+    return 0;
+}
+void add(int* pa,int* pb)
+{
+   int add;
+   add=*pa + *pb;
+   printf("%d\n",add);
+}
